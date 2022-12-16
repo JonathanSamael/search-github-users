@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: #002233;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    color: #002233;
+}
+
+main .devicon-github-original {
+    background: url(../images/icons8-github-80.png) center no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 60%;
+    max-width: 960px;
+    background-color: hsl(240, 31%, 94%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* margin: 0 auto; */
+    border: none;
+    border-radius: 15px;
+    padding: 20px 30px;
+}
+
+.container div {
+    padding-bottom: 20px;
+}
+
+
+.title {
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+#input-search {
+    width: 400px;
+    height: 30px;
+    margin-bottom: 15px;
+    border: 1px solid hsl(240, 1%, 42%);
+    border-radius: 8px;
+    text-align: center;
+    transition: ease-in 200ms;
+}
+
+#input-search:focus {
+    border: 2px solid hsl(0, 0%, 0%);
+}
+
+#btn-search {
+    cursor: pointer;
+    padding: 7px 35px;
+    border: 1px solid hsl(240, 1%, 42%);;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: ease-in 200ms;
+}
+
+#btn-search:hover {
+    background-color: #7df77c;
+}
+
+
+footer {
+    color: hsl(240, 31%, 94%);
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* ---------- iNFORMAÇÕES QUANDO APARECER O PERFIL ------- */
+
+.profile-data img {
+    width: 350px;
+    border-radius: 50%;
+    transition: ease-in 200ms;
+}
+
+.container .profile-data .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 35px 40px;
+    border-top: 1px solid #376e373a;
+}
+
+.container .profile-data .data {
+    padding-left: 20px;
+}
+
+.data h1 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.data p {
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.data a {
+    color: #002233;
+}
+
+.data a:hover {
+    color: #458345;
+}
+
+.section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #376e373a;
+}
+
+.container .section h2 {
+    padding: 20px;
+}
+
+.section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.repositories ul li {
+    padding: 10px;
+    margin: 20px;
+}
+
+.repositories a{
+    background-color: hsl(240, 6%, 90%);
+    color: #000;
+    font-weight: 300;
+    padding: 15px;
+    border: 1px solid #376e37;
+    border-radius: 8px;
+    transition: ease-in 200ms;
+}
+
+.repositories a:hover {
+    background-color: #7df77c;
+    font-weight: 500;
+}

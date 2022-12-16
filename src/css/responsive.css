@@ -1,0 +1,55 @@
+@media (max-width: 1024px) {
+    .profile-data .info img {
+        width: 250px;
+    }
+
+    .container .profile-data .info {
+        padding: 35px 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        padding: 20px;
+    }
+
+    .container {
+        min-width: 320px
+    }
+
+    #input-search {
+        width: 250px;
+    }
+
+    #btn-search {
+        padding: 7px 25px;
+    }
+
+    .profile-data .info img {
+        width: 200px;
+    }
+
+    .container .profile-data .info {
+        flex-direction: column;
+        padding: 35px 10px 0 10px;
+    }
+
+    .container .profile-data .info .data {
+        padding-top: 20px;
+    }
+
+    .repositories ul li {
+        margin: 5px;
+    }
+
+    .repositories a {
+        font-size: 14px;
+        padding: 7px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 0px;
+    }
+}
