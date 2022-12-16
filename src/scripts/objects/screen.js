@@ -1,4 +1,4 @@
-import { infosProfile } from "/src/scripts/variables.js"
+import { infosProfile } from "/scripts/variables.js"
 
 const screen = {
     userProfile: infosProfile,
