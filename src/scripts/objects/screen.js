@@ -9,10 +9,11 @@ const screen = {
                                         <div class="data">
                                             <h1>${user.name ?? "Não possui nome cadastrado 😅"}</h1>
                                             <p>${user.bio ?? "Não possui bio cadastrada 😅"} </p>
+                                            <p>Followers ${user.followers} • Following ${user.following}</p>
                                             <a target="_blank" href="${user.linkProfile}">Link to profile!</a>
                                         </div>
                                      </div>`
-
+     
         let repositoriesItens = ""
         user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
         
