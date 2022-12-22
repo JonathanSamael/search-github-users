@@ -153,7 +153,7 @@ footer {
     margin: 20px;
 }
 
-.repositories a{
+.repositories a {
     background-color: hsl(240, 6%, 90%);
     color: #000;
     font-weight: 300;
@@ -166,4 +166,14 @@ footer {
 .repositories a:hover {
     background-color: #7df77c;
     font-weight: 500;
+}
+
+.events.section ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.events.section ul li {
+    padding: 5px;
+    font-size: 12px;
 }
