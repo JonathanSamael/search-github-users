@@ -25,29 +25,29 @@ const screen = {
         }
 
         
-        let eventsItens = ""
         const validEvents = user.events
         let listEvents = validEvents.filter(event => event.type === "PushEvent" || event.type === "CreateEvent");
-        
+        let eventsItens = ""
+
         listEvents.forEach((event) => {
 
             let nameRepositories = event.repo.name
-            let messageCommit = event.payload.commits[0].message
-            console.log(eventsItens);
-
+            
             if (event.payload.commits) {
-                eventsItens += `<li><p><strong>${nameRepositories}</strong> - ${messageCommit}</p></li>`
-            }
-
-            if(validEvents.length > 0) {
-
-                this.userProfile.innerHTML += `<div class="events section">
-                                                    <h2>Últimos Eventos</h2>
-                                                    <ul>${eventsItens}</ul> 
-                                                </div>`
-            }
+                let messageCommit = event.payload.commits[0].message
+            
+                eventsItens += `<li><p>- <strong>${nameRepositories}</strong> - <br> ${messageCommit}</p></li>`
+                    
+            } else {
+                eventsItens += `<li><p>- <strong>${nameRepositories}</strong> - <br>Evento não possui commit</p></li>`
+            } 
         })
-        
+                
+            this.userProfile.innerHTML += `<div class="events section">
+                                                <h2>Últimos Eventos</h2>
+                                                <ul>${eventsItens}</ul> 
+                                            </div>`
+            console.log(eventsItens);
 
     },
     renderNotFound() {
