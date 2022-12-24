@@ -6,6 +6,11 @@
     .container .profile-data .info {
         padding: 35px 10px;
     }
+
+    .repositories a {
+        font-size: 15px;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -51,5 +56,9 @@
 @media (max-width: 600px) {
     .section {
         padding: 0px;
+    }
+
+    .events.section ul li {
+        font-size: 11px;
     }
 }

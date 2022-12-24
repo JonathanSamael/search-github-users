@@ -46,7 +46,6 @@ main .devicon-github-original {
     padding-bottom: 20px;
 }
 
-
 .title {
     font-weight: 700;
     letter-spacing: 3px;
@@ -128,11 +127,12 @@ footer {
 }
 
 .data a:hover {
-    color: #458345;
+    color: #376e37;
+    text-shadow: 1px 1px 3px #939393;
 }
 
 .section {
-    padding: 20px;
+    padding: 20px 5px;
     display: flex;
     flex-direction: column;
     border-top: 1px solid #376e373a;
@@ -166,6 +166,7 @@ footer {
 .repositories a:hover {
     background-color: #7df77c;
     font-weight: 500;
+    box-shadow: 1px 1px 3px;
 }
 
 .events.section ul {
@@ -174,6 +175,6 @@ footer {
 }
 
 .events.section ul li {
-    padding: 5px;
+    padding-bottom: 15px;
     font-size: 12px;
 }
