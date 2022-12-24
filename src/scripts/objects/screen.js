@@ -43,10 +43,17 @@ const screen = {
             } 
         })
                 
-            this.userProfile.innerHTML += `<div class="events section">
+            if (validEvents.length > 0) {
+                this.userProfile.innerHTML += `<div class="events section">
                                                 <h2>Últimos Eventos</h2>
                                                 <ul>${eventsItens}</ul> 
-                                            </div>`
+                                                </div>`
+            } else {
+                this.userProfile.innerHTML += `<div class="events section">
+                                                <h2>Últimos Eventos</h2>
+                                                <ul>Não possui eventos no últimos 90 dias</ul> 
+                                                </div>`
+            }
             console.log(eventsItens);
 
     },
