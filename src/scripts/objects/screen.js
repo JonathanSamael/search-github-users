@@ -23,7 +23,7 @@ const screen = {
                                             <p class="item-repo">🍴${repo.forks}</p>
                                             <p class="item-repo">⭐${repo.stargazers_count}</p>
                                             <p class="item-repo">👀${repo.watchers}</p>
-                                            <p class="item-repo">🧑🏽‍💻${repo.language}</p>
+                                            <p class="item-repo">🧑🏽‍💻${repo.language ?? " "}</p>
                                         </div>
                                     </a>
                                  </li>`
@@ -65,7 +65,7 @@ const screen = {
                                                 <p>Não possui eventos <strong>Push</strong> ou <strong>Create</strong> nos últimos 90 dias</p> 
                                                 </div>`
         }
-        
+
     },
     renderNotFound() {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado!</h3>"
