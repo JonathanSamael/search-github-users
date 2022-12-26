@@ -23,7 +23,7 @@ const screen = {
                                             <p class="item-repo">🍴${repo.forks}</p>
                                             <p class="item-repo">⭐${repo.stargazers_count}</p>
                                             <p class="item-repo">👀${repo.watchers}</p>
-                                            <p class="item-repo">🧑🏽‍💻${repo.language ?? " "}</p>
+                                            <p class="item-repo">🧑🏽‍💻${repo.language ?? "---"}</p>
                                         </div>
                                     </a>
                                  </li>`
