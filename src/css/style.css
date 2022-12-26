@@ -36,13 +36,12 @@ main .devicon-github-original {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* margin: 0 auto; */
     border: none;
     border-radius: 15px;
     padding: 20px 30px;
 }
 
-.container div {
+.container .info-container {
     padding-bottom: 20px;
 }
 
@@ -88,7 +87,6 @@ footer {
     justify-content: flex-end;
     align-items: center;
 }
-
 
 /* ---------- iNFORMAÇÕES QUANDO APARECER O PERFIL ------- */
 
@@ -151,6 +149,10 @@ footer {
 .repositories ul li {
     padding: 10px;
     margin: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
 }
 
 .repositories a {
@@ -167,6 +169,22 @@ footer {
     background-color: #7df77c;
     font-weight: 500;
     box-shadow: 1px 1px 3px;
+}
+
+.repositories ul li .items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.repositories .items-container .item-repo {
+    background-color: #014161;
+    color: #fff;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 4px;
+
 }
 
 .events.section ul {
