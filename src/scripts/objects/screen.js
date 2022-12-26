@@ -23,7 +23,6 @@ const screen = {
                                                 <ul>${repositoriesItens}</ul>
                                             </div>`
         }
-
         
         const validEvents = user.events
         let listEvents = validEvents.filter(event => event.type === "PushEvent" || event.type === "CreateEvent");
@@ -43,7 +42,7 @@ const screen = {
             } 
         })
                 
-            if (validEvents.length > 0) {
+            if (listEvents.length > 0) {
                 this.userProfile.innerHTML += `<div class="events section">
                                                 <h2>Últimos Eventos</h2>
                                                 <ul>${eventsItens}</ul> 
@@ -51,10 +50,10 @@ const screen = {
             } else {
                 this.userProfile.innerHTML += `<div class="events section">
                                                 <h2>Últimos Eventos</h2>
-                                                <ul>Não possui eventos no últimos 90 dias</ul> 
+                                                <p>Não possui eventos <strong>Push</strong> ou <strong>Create</strong> nos últimos 90 dias</p> 
                                                 </div>`
             }
-            console.log(eventsItens);
+
 
     },
     renderNotFound() {
