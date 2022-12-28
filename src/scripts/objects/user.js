@@ -4,8 +4,8 @@ const user = {
     bio: "",
     userName:"",
     linkProfile: "",
-    followers: "",
-    following: "",
+    followers: 0,
+    following: 0,
     repositories: [],
     events: [],
     setInfo(gitHubUser) {

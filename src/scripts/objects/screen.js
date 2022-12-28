@@ -1,7 +1,5 @@
-import { infosProfile } from "../variables.js"
-
 const screen = {
-    userProfile: infosProfile,
+    userProfile: document.querySelector(".profile-data"),
     renderUser(user) {
         this.userProfile.innerHTML =
             `<div class="info">
@@ -13,10 +11,12 @@ const screen = {
                                             <a target="_blank" href="${user.linkProfile}">Link to profile!</a>
                                         </div>
                                      </div>`
+    },
 
-        const usersRepositories = user.repositories
+    renderRepositories(repositories) {
+        
         let repositoriesItens = ""
-        usersRepositories.forEach((repo) => {
+        repositories.repositories.forEach((repo) => {
 
             repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}
                                         <div class="items-container">
@@ -29,15 +29,17 @@ const screen = {
                                  </li>`
         });
 
-        if (user.repositories.length > 0) {
+        if (repositories.repositories.length > 0) {
             this.userProfile.innerHTML += `<div class="repositories section">
                                                 <h2>Repositórios</h2>
                                                 <ul>${repositoriesItens}</ul>
                                             </div>`
         }
-
-        const validEvents = user.events
-        let listEvents = validEvents.filter(event => event.type === "PushEvent" || event.type === "CreateEvent");
+    },
+ 
+    renderEvents(events) {
+        
+        let listEvents = events.events.filter(event => event.type === "PushEvent" || event.type === "CreateEvent");
         let eventsItens = ""
 
         listEvents.forEach((event) => {
@@ -58,15 +60,15 @@ const screen = {
             this.userProfile.innerHTML += `<div class="events section">
                                                 <h2>Últimos Eventos</h2>
                                                 <ul>${eventsItens}</ul> 
-                                                </div>`
+                                            </div>`
         } else {
             this.userProfile.innerHTML += `<div class="events section">
                                                 <h2>Últimos Eventos</h2>
                                                 <p>Não possui eventos <strong>Push</strong> ou <strong>Create</strong> nos últimos 90 dias</p> 
-                                                </div>`
+                                            </div>`
         }
-
     },
+
     renderNotFound() {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado!</h3>"
     }
